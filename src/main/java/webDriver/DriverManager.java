@@ -4,9 +4,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DriverManager {
+import java.util.concurrent.TimeUnit;
 
-    private WebDriver webDriver;
+public class DriverManager {
 
     private void setupChromeDriver() {
         WebDriverManager.chromedriver().setup();
@@ -14,7 +14,9 @@ public class DriverManager {
 
     public WebDriver setupDriver() {
         setupChromeDriver();
-        return webDriver = new ChromeDriver();
+        WebDriver webDriver = new ChromeDriver();
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return webDriver;
     }
 
 }
