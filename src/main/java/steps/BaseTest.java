@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import utils.WaitActions;
 import webDriver.DriverManager;
 
-import java.util.concurrent.TimeUnit;
-
 public class BaseTest {
 
     private static WebDriver webDriver;
