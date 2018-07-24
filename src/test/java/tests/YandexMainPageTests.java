@@ -2,7 +2,7 @@ package tests;
 
 import categories.AwesomeTest;
 import org.junit.jupiter.api.DisplayName;
-import steps.BaseTest;
+import testUtils.BaseTest;
 
 @DisplayName("Yandex main page tests")
 class YandexMainPageTests extends BaseTest {

@@ -1,8 +1,8 @@
-package steps;
+package MainPage;
 
+import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import pageObjects.MainPage;
 import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
 import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory;
 
@@ -13,7 +13,7 @@ public class MainPageSteps {
     private WebDriver webDriver;
     private MainPage mainPage;
 
-    MainPageSteps(WebDriver webDriver) {
+    public MainPageSteps(WebDriver webDriver) {
         init(webDriver);
         this.webDriver = webDriver;
     }
@@ -28,6 +28,7 @@ public class MainPageSteps {
         }
     }
 
+    @Step("Открытие главной страницы")
     public void checkMainPageIsOpened() {
         assertThat(mainPage.isDisplayed()).as("Main page was not opened").isTrue();
     }
